@@ -128,7 +128,7 @@ function Header() {
             </div>
             <div className='absolute px-4 py-2 bg-transparent'>
                 {/* Show the current path */}
-                <code className='text-center text-xs my-2 p-1 rounded w-[60px]'>you are here: <span className=''>{window.location.pathname}</span></code>
+                {/* <code className='text-center text-xs my-2 p-1 rounded w-[60px]'>you are here: <span className=''>{window.location.pathname}</span></code> */}
             </div>
     </div>
     
