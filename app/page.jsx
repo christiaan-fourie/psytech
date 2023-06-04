@@ -7,7 +7,7 @@ export default function Home() {
 
   
   return (
-    <main className='flex md:justify-center'>   
+    <main className='flex md:justify-center'>
       <Header />
       <Hero />
     </main>
