@@ -91,16 +91,18 @@
 
 /* Customizations */
 
+
 /* Glassmorphism Effect */
 .glass {
   background: linear-gradient(
     180deg,
-    rgba(var(--background-start-rgb), 0.5) 0%,
-    rgba(var(--background-end-rgb), 0.5) 100%
+    rgba(var(--background-start-rgb), 0.9) 0%,
+    rgba(var(--background-end-rgb), 0.9) 100%
   );
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(28px);
   border: 1px solid rgba(var(--foreground-rgb), 0.125);
   box-shadow: 0 8px 32px 0 rgba(var(--foreground-rgb), 0.125);
+  z-index: 999;
 }
 
 /* Button */

@@ -1,12 +1,15 @@
-import Image from 'next/image'
+import Header from '@/components/Header/Header'
+import Hero from '@/components/Hero/Hero'
 
 
-import { FaGithub } from 'react-icons/fa'
 
 export default function Home() {
+
+  
   return (
-    <main className='flex flex-col justify-center items-center'>   
-      Home
+    <main className='flex md:justify-center'>   
+      <Header />
+      <Hero />
     </main>
   )
 }
