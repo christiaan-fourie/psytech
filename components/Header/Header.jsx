@@ -12,16 +12,16 @@ function Header() {
     const [showMenu, setShowMenu] = useState(false)
 
     // Active Page
-    const [activePage, setActivePage] = useState('home')
+    const [activePage, setActivePage] = useState('')
 
     // useEffect When the page gets loaded, check the URL and set the active page
     useEffect(() => {
+        // Remove the '/' from the URL
         if (window.location.pathname === '/') {
             setActivePage('home')
-        } else if (window.location.pathname === '/about') {
-            setActivePage('about')
-        } else if (window.location.pathname === '/contact') {
-            setActivePage('contact')
+        } else {
+            const url = window.location.pathname.replace('/', '')
+            setActivePage(url)
         }
     }, [])
 
@@ -39,7 +39,7 @@ function Header() {
 
 
   return (
-    <div className='fixed w-full backdrop-blur-sm drop-shadow-6xl'>
+    <div className='fixed top-0 w-full backdrop-blur-sm shadow-2xl'>
         <div className='flex justify-around items-center w-full py-4 border-b border-blue-500 border-opacity-50 overflow-hidden'>
                 {/* Dim the page */}
                 <div className='flex items-center'>
