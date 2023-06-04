@@ -40,7 +40,7 @@ function Header() {
 
   return (
     <div className='fixed top-0 w-full backdrop-blur-sm shadow-2xl'>
-        <div className='flex justify-around items-center w-full py-4 border-b border-blue-500 border-opacity-50 overflow-hidden'>
+        <div className='flex justify-around items-center w-full py-4 border-b border-white border-opacity-50 overflow-hidden'>
                 {/* Dim the page */}
                 <div className='flex items-center'>
                     <Image
@@ -51,8 +51,8 @@ function Header() {
                         height={50}
                         priority
                     />
-                    <Link href='/' className="pl-6 text-3xl font-light hover:cursor-pointer bg-clip-text text-transparent bg-gradient-to-r from-[#517dbf] to-[#2daa52]">
-                        Psytech <span>Studio</span>
+                    <Link href='/' className="pl-4 tracking-tighter text-3xl font-extrabold hover:cursor-pointer bg-clip-text text-transparent bg-gradient-to-r from-[#517dbf] to-[#2daa52]">
+                        Psytech<span className='font-extralight'>Studio</span>
                     </Link>
                 </div>
                 <div className='flex items-center'>
@@ -125,6 +125,10 @@ function Header() {
                         </svg>
                     )}
                 </div>
+            </div>
+            <div className='absolute px-4 py-2 bg-transparent'>
+                {/* Show the current path */}
+                <code className='text-center text-xs my-2 p-1 rounded w-[60px]'>you are here: <span className=''>{window.location.pathname}</span></code>
             </div>
     </div>
     
