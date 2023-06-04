@@ -30,7 +30,7 @@ const Cursor = () => {
         return () => clearTimeout(timeout);
     }, [position]);
 
-    
+
 
     
 
@@ -50,7 +50,7 @@ const Cursor = () => {
                 >
             </div>
             <div
-                className='fixed z-50 w-1 h-1 bg-white rounded-full pointer-events-none transform -translate-x-4-translate-y-4'
+                className='fixed z-50 w-1 h-1 bg-[#517dbf] rounded-full pointer-events-none transform -translate-x-4-translate-y-4'
                 style={{ left: position.x, top: position.y }}
                 >
             </div>
