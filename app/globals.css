@@ -13,6 +13,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary-rgb: '#2daa52';
+  --secondary-rgb: '#517dbf';
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -95,6 +97,33 @@
 code {
   font-family: var(--font-mono);
   background-color: gray;
+}
+/* a customized scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  /* A gradient that feature site primary and secondary colors */
+  background: linear-gradient(
+    0deg, #517dbf, #2daa52
+  );
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #555;
+}
+::-webkit-scrollbar-thumb:vertical {
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  border-radius: 10px;
 }
 
 /* Glow */
