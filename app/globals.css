@@ -97,6 +97,11 @@ code {
   background-color: gray;
 }
 
+/* Glow */
+.glow {
+  filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 1));
+}
+
 /* Glassmorphism Effect */
 .glass {
   background: linear-gradient(
