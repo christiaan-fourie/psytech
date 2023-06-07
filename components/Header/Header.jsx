@@ -39,7 +39,7 @@ function Header() {
 
 
   return (
-    <div className='fixed top-0 w-full backdrop-blur-sm shadow-2xl'>
+    <div className='fixed top-0 w-full backdrop-blur-sm shadow-2xl z-50'>
         <div className='flex justify-around items-center w-full py-4 border-b border-white border-opacity-50 overflow-hidden'>
                 {/* Dim the page */}
                 <div className='flex items-center'>
@@ -56,7 +56,7 @@ function Header() {
                     </Link>
                 </div>
                 <div className='flex items-center'>
-                    <div className={`${showMenu ? 'absolute h-[100vh] glass bg-opacity-90 w-3/5 left-0 top-0 z-50' : 'hidden'} md:flex`}>
+                    <div className={`${showMenu ? 'absolute h-[100vh] glass bg-opacity-90 w-3/5 left-0 top-0 z-40' : 'hidden'} md:flex`}>
                         <ul className={`${showMenu ? 'flex-col gap-12 align-middle mt-[30vh]' : 'flex-row'} flex justify-end `}>
                             <li className="px-4 py-2 transition-all duration-300">
                                 <Link href='/' onClick={(e) => setActivePage('home')} className={`${activePage === 'home' ? 'neonButton active' : 'neonButton'}`}>
