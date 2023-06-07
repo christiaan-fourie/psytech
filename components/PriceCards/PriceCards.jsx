@@ -2,8 +2,8 @@ import React from 'react'
 
 const PriceCards = () => {
   return (
-    <div className='flex flex-col md:flex-row justify-around p-8 mx-24'>
-        <div className='flex flex-col justify-center w-1/3 items-center p-8 rounded-3xl shadow-[0_0_16px_5px_#2daa5255] backdrop-blur-sm'>
+    <div className='flex flex-col gap-4 md:flex-row justify-around md:p-8 mx-24'>
+        <div className='flex flex-col justify-center md:w-1/3 items-center p-8 rounded-3xl shadow-[0_0_16px_5px_#2daa5255] backdrop-blur-sm'>
           <h1 className='text-4xl'>Basic</h1>
           <h1 className='text-6xl'>R 600</h1>
           <p>Per Month</p>
