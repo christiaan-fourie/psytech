@@ -1,61 +1,39 @@
 'use client'
-
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const Cursor = () => {
-    // State for the pointer x, y position
-    const [position, setPosition] = useState({ x: 0, y: 0 });
-    //   Delayed position state
-    const [delayedPosition, setDelayedPosition] = useState({ x: 0, y: 0 });
+  const cursor1 = useRef(null);
+  const cursor2 = useRef(null);
 
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      cursor1.current.style.left = event.clientX + 8 + 'px';
+      cursor1.current.style.top = event.clientY + 8 + 'px';
+      cursor2.current.style.left = event.clientX + 'px';
+      cursor2.current.style.top = event.clientY + 'px';
+    };
 
-    // Use an effect that gets the mouse movements
-    useEffect(() => {
-        const setFromEvent = (e) => setPosition({ x: e.clientX, y: e.clientY });
-        window.addEventListener('mousemove', setFromEvent);
-        return () => {
-        window.removeEventListener('mousemove', setFromEvent);
-        };
-    }, []);
+    document.addEventListener('mousemove', handleMouseMove);
 
-    // Spawn a little ring that disapears after 0.5s
-    useEffect(() => {
-        // Don't spawn a ring on the first render
-        if (position.x === 0 && position.y === 0) return;
-        // Set the delayed position to be the current position
-        setDelayedPosition(position);
-        // Set a timeout to reset it after 0.5s
-        const timeout = setTimeout(() => setDelayedPosition({ x: 0, y: 0 }), 500);
-        // Clear the timeout if the component unmounts
-        return () => clearTimeout(timeout);
-    }, [position]);
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
 
-
-
-    
-
-  
-    //   Log it
-    console.log(position);
-    console.log(delayedPosition);
-
-
-
-
-    return (
-        <div>
-            <div
-                className='fixed z-50 w-1 h-1 bg-white rounded-full pointer-events-none transform -translate-x-4-translate-y-4'
-                style={{ left: delayedPosition.x, top: delayedPosition.y }}
-                >
-            </div>
-            <div
-                className='fixed z-50 w-1 h-1 bg-[#517dbf] rounded-full pointer-events-none transform -translate-x-4-translate-y-4'
-                style={{ left: position.x, top: position.y }}
-                >
-            </div>
-        </div>    
-    );
+  return (
+    <>
+      <div
+        id="cursor"
+        ref={cursor1}
+        className="bg-[#2daa52] h-1 w-1 fixed rounded-full z-[900]"
+      ></div>
+      <div
+        id="cursor2"
+        ref={cursor2}
+        className="border-2 rounded-full shadow-[0_0_15px_2px_#2daa52] border-[#2daa52] h-9 w-9 fixed transition-all duration-700 ease-out hover:bg-opacity-10 -translate-x-1/4 -translate-y-1/4"
+      ></div>
+    </>
+  );
 };
 
 export default Cursor;
