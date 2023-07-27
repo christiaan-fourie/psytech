@@ -10,6 +10,22 @@ export default function Home() {
       <Hero />
 
       {/* Three Cards that display the pricing structure */}
+      <div className='text-center'>
+                <div className='flex flex-row justify-center items-center gap-12'>
+                  <div className='w-1/5 bg-neutral-900 rounded-lg shadow-lg p-4'>
+                    <h1 className='text-2xl font-bold'>Secure</h1>
+                    <p className=''>Protecting unauthorized access and damage through measures like encryption, firewalls, and access controls.</p>
+                  </div>
+                  <div className='w-1/5 bg-neutral-900 rounded-lg shadow-lg p-4'>
+                    <h1 className='text-2xl font-bold'>Private</h1>
+                    <p className=''>Personal information remains confidential and away from public view, achieved by collecting minimal data.</p>
+                  </div>
+                  <div className='w-1/5 bg-neutral-900 rounded-lg shadow-lg p-4'>
+                    <h1 className='text-2xl font-bold'>Reliable</h1>
+                    <p className=''>Performs consistently without failure over time, garuanteed to be up and running at 99%.</p>
+                  </div>
+                </div>
+              </div>
       <PriceCards />
       <div className='flex flex-col md:flex-row lg:w-2/3 mx-auto py-24 items-center'>
         <div className='overflow-visible md:w-1/2 rotate-1 pl-4 tracking-tighter text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#517dbf] to-[#2daa52]'>Introduction</div>
