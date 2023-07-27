@@ -10,7 +10,7 @@ export default function Hero() {
 
   return (
     <div>
-        <div className='flex items-center'>
+        <div className='flex items-center pt-[160px]'>
           <Image alt='Psytech Software Core' className='animate-pulse' width={500} height={250} src='/technology.png'></Image>
           <div>
             <h1 className='text-8xl my-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-red-500'>Core Focus</h1>
