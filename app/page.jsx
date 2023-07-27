@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
 
       {/* Three Cards that display the pricing structure */}
-      <div className='text-center'>
+      <div className='text-center my-24'>
                 <div className='flex flex-row justify-center items-center gap-12'>
                   <div className='w-1/5 bg-neutral-900 rounded-lg shadow-lg p-4'>
                     <h1 className='text-2xl font-bold'>Secure</h1>
