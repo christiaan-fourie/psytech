@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
 import Header from '../../components/Header/Header'
 
 
-const signUp = () => {
+const SignUp = () => {
 
     // State
     const [message, setMessage] = useState('')
@@ -107,4 +107,4 @@ const signUp = () => {
       )
   }
 
-export default signUp
+export default SignUp
