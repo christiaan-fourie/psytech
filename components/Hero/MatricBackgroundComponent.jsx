@@ -1,4 +1,7 @@
+'use client'
+
 import React, { useEffect, useRef } from 'react';
+
 
 const matrix = ' MAYBE8 WE4 ARE3 THE6 ONES2 WHO3 ARE0 BROKEN5 IN1 THE7 FIRST9 PLACE1';
 const columns = Math.ceil(window.innerWidth / 8);
