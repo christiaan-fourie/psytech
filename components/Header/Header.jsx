@@ -90,7 +90,8 @@ function Header() {
                             </li>
                             <li className="px-4 py-2 transition-all duration-300">
                                 {isLoggedin ? 
-                                    <ProfileICon />
+                                    // <ProfileICon />
+                                    <h1>Icon</h1>
                                     : 
                                     <Link href='/login' onClick={(e) => setActivePage('login')} className={`${activePage === 'login' ? 'neonButton active' : 'neonButton'}`}>
                                         <span></span>
