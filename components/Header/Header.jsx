@@ -11,6 +11,8 @@ function Header() {
 
     const [showMenu, setShowMenu] = useState(false)
 
+    const [isLoggedin, setIsLoggedin] = useState(false);
+
     // Active Page
     const [activePage, setActivePage] = useState('')
 
@@ -29,18 +31,19 @@ function Header() {
 
     
     // If user clicks outside of the menu, close it
-    if (showMenu) {
-        window.onclick = function(event) {
-            if (event.target.className === 'fixed w-full h-full left-0 top-0 bg-black bg-opacity-30 z-0') {
-                setShowMenu(false)
-            }
-        }
-    }
+    // if (showMenu) {
+    //     window.onclick = function(event) {
+    //         // Wait 1 second before closing the menu
+    //         setTimeout(() => {
+    //             setShowMenu(false)
+    //         }, 1000)
+    //     }
+    // }
 
 
   return (
     <div className='fixed top-0 w-full backdrop-blur-sm shadow-2xl z-50'>
-        <div className='flex justify-around items-center w-full py-4 border-b border-white border-opacity-50 overflow-hidden'>
+        <div className='flex justify-between px-4 items-center w-full py-4 border-b border-white border-opacity-50 overflow-hidden'>
                 {/* Dim the page */}
                 <div className='flex items-center'>
                     <Image
@@ -85,6 +88,19 @@ function Header() {
                                     Contact
                                 </Link>
                             </li>
+                            <li className="px-4 py-2 transition-all duration-300">
+                                {isLoggedin ? 
+                                    <ProfileICon />
+                                    : 
+                                    <Link href='/login' onClick={(e) => setActivePage('login')} className={`${activePage === 'login' ? 'neonButton active' : 'neonButton'}`}>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        Login
+                                    </Link>
+                                }
+                            </li>
                         </ul>                                      
                     </div>
                 {/* A Mobile Menu SVG */}
@@ -125,11 +141,7 @@ function Header() {
                         </svg>
                     )}
                 </div>
-            </div>
-            <div className='absolute px-4 py-2 bg-transparent'>
-                {/* Show the current path */}
-                {/* <code className='text-center text-xs my-2 p-1 rounded w-[60px]'>you are here: <span className=''>{window.location.pathname}</span></code> */}
-            </div>
+        </div>
     </div>
     
   )
