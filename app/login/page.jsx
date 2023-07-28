@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 
 // import components
 import Header from '../../components/Header/Header'
-
+import Loader from '../../components/Loader/'
 
 const Login = () => {
 
