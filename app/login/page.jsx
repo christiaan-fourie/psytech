@@ -76,7 +76,7 @@ const Login = () => {
           <Header />
           
             {/* A mini Form that adds users */}
-            <div className='mx-24 h-full p-12 rounded-xl'>
+            <div className='md:mx-24 lg:mx-48 h-full p-12 rounded-xl'>
               <form onSubmit={handleLogin} className='flex flex-col h-full justify-center'>
                 
                       <h1 className="text-6xl text-center my-6">Login</h1>
