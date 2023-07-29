@@ -5,67 +5,36 @@ import PriceCards from '@/components/PriceCards/PriceCards'
 export default function Home() {  
   return (
     <main className='flex flex-col md:justify-center'>
-      <Header />
-      
+      <Header />      
       <Hero />
 
       {/* Three Cards that display the pricing structure */}
-      <div className='text-center my-20'>
-                <div className='flex flex-col sm:flex-row justify-center items-center gap-12'>
-                  <div className='w-4/5 md:w-1/5 bg-neutral-900 rounded-lg shadow-lg p-4'>
-                    <h1 className='text-2xl font-bold'>Secure</h1>
-                    <p className=''>Protecting unauthorized access and damage through measures like encryption, firewalls, and access controls.</p>
-                  </div>
-                  <div className='w-4/5 md:w-1/5 bg-neutral-900 rounded-lg shadow-lg p-4'>
-                    <h1 className='text-2xl font-bold'>Private</h1>
-                    <p className=''>Personal information remains confidential and away from public view, achieved by collecting minimal data.</p>
-                  </div>
-                  <div className='w-4/5 md:w-1/5 bg-neutral-900 rounded-lg shadow-lg p-4'>
-                    <h1 className='text-2xl font-bold'>Reliable</h1>
-                    <p className=''>Performs consistently without failure over time, garuanteed to be up and running at 99%.</p>
-                  </div>
-                </div>
-              </div>
-      <PriceCards />
-      <div className='flex flex-col md:flex-row lg:w-2/3 mx-auto py-24 items-center'>
-        <div className='overflow-visible md:w-1/2 rotate-1 pl-4 tracking-tighter text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#517dbf] to-[#2daa52]'>Introduction</div>
-        <p className='w-1/2 -rotate-3 font-sans font-light text-lg bg-opacity-50'>
-          Welcome to Psytech Studio, where software design meets exceptional user experience. We&apos;re a team driven by innovation and fueled by the latest technologies. Stay ahead of the curve and never get left behind. Unleash your potential with us today!
-        </p>
+      <div className='text-center bg-neutral-800 pb-12'>
+        <h1 className='text-4xl my-6 bg-clip-text font-bold text-transparent bg-gradient-to-r from-green-700 to-blue-500'>We Value</h1>
+        <div className='flex flex-col sm:flex-row justify-center items-center gap-12'>
+          <div className='w-4/5 md:w-1/5 bg-neutral-900 rounded-lg shadow-lg p-4'>
+            <h2 className='text-2xl font-bold py-2'>Security</h2>
+            <p className='font-sans font-light text-lg bg-opacity-50'>Protecting against unauthorized access and damage through measures like encryption, firewalls, and access controls.</p>
+          </div>
+          <div className='w-4/5 md:w-1/5 bg-neutral-900 rounded-lg shadow-lg p-4'>
+            <h2 className='text-2xl font-bold py-2'>Privacy</h2>
+            <p className='font-sans font-light text-lg bg-opacity-50'>Ensuring personal information remains confidential and away from public view, safeguarding your privacy.</p>
+          </div>
+          <div className='w-4/5 md:w-1/5 bg-neutral-900 rounded-lg shadow-lg p-4'>
+            <h2 className='text-2xl font-bold py-2'>Reliability</h2>
+            <p className='font-sans font-light text-lg bg-opacity-50'>Guaranteeing we and our systems will perform consistently without failure over time, ensuring an uptime of 99%.</p>
+          </div>
+        </div>
       </div>
-      {/* Security Explanation */}
-      {/* We take security very seriously and we ensure that all our information is secure. */}
-      {/* We make use of the latest security protocols and ensure that all our data is encrypted and secure. */}
-      {/* furthermore open source approuch is mostly taken to ensure that developers all over the world can overview the code and suggest any security issues. */}
 
-
-
-      {/* Our Software */}
-      {/* We have a wide range of software that we have developed and we are always looking for new ideas and new ways to improve our software. */}
-      {/* Zestify */}
-      {/* Userbase */}
-      {/* Algotrader */}
-
-      {/* The Technologies we use */}
-      {/* We make use of the latest technologies to ensure that our software is up to date and that we are always on the cutting edge of technology. */}
-      {/* React */}
-      {/* NextJS */}
-      {/* TailwindCSS */}
-      {/* NodeJS */}
-      {/* MongoDB */}
-      {/* ExpressJS */}
-      {/* Python */}
-      {/* Django */}
-      {/* Flask */}
-      {/* JWT */}
-      {/* OAuth */}
-
-      {/* Our Projects */}
-      {/* We build software solutions for clients, from managing business to training ai models with their data */}
-      {/* Champsfirm */}
-      {/* Mayan Design */}
-      {/* CF Motor repairs */}
-      
+      <PriceCards />
+      <div className='flex flex-col md:flex-row py-24 items-center justify-center gap-6'>
+        <div className='text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#517dbf] to-[#2daa52]'>Subscribe</div>
+        <div className='flex flex-col md:flex-row items-center gap-4'>
+          <input className='border border-[#2daa52] text-[#2daa52] my-4 py-2 px-4 w-[40vw]' placeholder='Email Address' />
+          <button className='border border-[#2daa52] text-[#2daa52] my-4 py-2 px-4'>Subscribe</button>
+        </div>
+      </div>      
     </main>
   )
 }
