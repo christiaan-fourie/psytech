@@ -25,7 +25,7 @@ const About = () => {
         clearInterval(typing)
         setIsTyping(false)
       }
-    }, 100)
+    }, 10)
   }, [])
 
   // After typing the header text, it should change the image to devicesAuth.png
