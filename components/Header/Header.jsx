@@ -2,17 +2,12 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-
-import { FaGithub } from 'react-icons/fa'
-
 import { useState, useEffect } from 'react'
 
-function Header() {
+function Header() {    
 
     const [showMenu, setShowMenu] = useState(false)
-
     const [isLoggedin, setIsLoggedin] = useState(false);
-
     // Active Page
     const [activePage, setActivePage] = useState('')
 
@@ -26,19 +21,6 @@ function Header() {
             setActivePage(url)
         }
     }, [])
-
-
-
-    
-    // If user clicks outside of the menu, close it
-    // if (showMenu) {
-    //     window.onclick = function(event) {
-    //         // Wait 1 second before closing the menu
-    //         setTimeout(() => {
-    //             setShowMenu(false)
-    //         }, 1000)
-    //     }
-    // }
 
 
   return (
@@ -59,13 +41,10 @@ function Header() {
                     </Link>
                 </div>
                 <div className='flex items-center'>
-                    <div className={`${showMenu ? 'absolute h-[100vh] glass bg-opacity-90 w-3/5 left-0 top-0 z-40' : 'hidden'} md:flex`}>
-                        <ul className={`${showMenu ? 'flex-col gap-12 align-middle mt-[30vh]' : 'flex-row'} flex justify-end `}>
+                    <div className={`${showMenu ? 'absolute h-[100vh] glass bg-opacity-90 w-1/3 left-0 top-0 z-40' : 'hidden'} md:flex`}>
+                        <ul className={`${showMenu ? 'flex-col' : 'flex-row'} flex justify-end `}>
                             <li className="px-4 py-2 transition-all duration-300">
                                 <Link href='/' onClick={(e) => setActivePage('home')} className={`${activePage === 'home' ? 'neonButton active' : 'neonButton'}`}>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
                                     <span></span>
                                     Home
                                 </Link>
@@ -73,17 +52,11 @@ function Header() {
                             <li className="px-4 py-2 transition-all duration-300">
                                 <Link href='/about' onClick={(e) => setActivePage('about')} className={`${activePage === 'about' ? 'neonButton active' : 'neonButton'}`}>
                                     <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
                                     About
                                 </Link>
                             </li>
                             <li className="px-4 py-2 transition-all duration-300">
                                 <Link href='/contact' onClick={(e) => setActivePage('contact')} className={`${activePage === 'contact' ? 'neonButton active' : 'neonButton'}`}>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
                                     <span></span>
                                     Contact
                                 </Link>
@@ -94,9 +67,6 @@ function Header() {
                                     <h1>Icon</h1>
                                     : 
                                     <Link href='/login' onClick={(e) => setActivePage('login')} className={`${activePage === 'login' ? 'neonButton active' : 'neonButton'}`}>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
                                         <span></span>
                                         Login
                                     </Link>
