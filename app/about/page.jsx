@@ -64,7 +64,7 @@ const About = () => {
                 We connect people to your business, this ensures that you are able to make informed decisions and provide the best service to your customers. <br />
                   <button className='border border-[#2daa52] text-[#2daa52] my-4 py-2 px-4'>Explore More</button>
                 </p>
-                <div className="p-12 gap-4">
+                <div className="p-12 gap-4 bg-neutral-900">
                   <h1 className='text-4xl text-center font-bold my-6 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-500'>Our tech stack.</h1>
                   <div className="flex flex-col gap-4 md:flex-row justify-around items-center pt-24 px-12">
                     <div className="flex flex-col items-center">
