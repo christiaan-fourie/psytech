@@ -71,7 +71,7 @@ const About = () => {
                       <Image alt='Psytech Software Devices' className="animate-pulse"  width={techStachSize} height={techStachSize} src="/react.png"></Image>
                     </div>
                     <div className="flex flex-col items-center">
-                      <Image alt='Psytech Software Devices' className="animate-pulse"  width={techStachSize} height={techStachSize} src="/next.png"></Image>
+                      <Image alt='Psytech Software Devices' className="animate-pulse invert"  width={techStachSize} height={techStachSize} src="/next.png"></Image>
                     </div>
                     <div className="flex flex-col items-center">
                       <Image alt='Psytech Software Devices' className="animate-pulse"  width={techStachSize} height={techStachSize} src="/tailwind.webp"></Image>
