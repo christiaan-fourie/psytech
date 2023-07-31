@@ -73,7 +73,7 @@ const ParticleSystem = () => {
     animate();
   }, []);
 
-  return <canvas ref={canvasRef} width={3660} height={2400} className='fixed top-0 left-0 -z-20' />;
+  return <canvas ref={canvasRef} width={3660} height={2400} className='fixed top-0 left-0 -z-20 overflow-hidden' />;
 };
 
 export default ParticleSystem;
