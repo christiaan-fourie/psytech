@@ -2,7 +2,7 @@ import React from 'react'
 
 const Loader = () => {
   return (
-    <div className='absolute animate-pulse pt-[50vh] h-screen z-50 w-full backdrop-blur-xl'>
+    <div className='absolute animate-pulse pt-[50vh] h-screen w-full glass backdrop-blur-xl z-50'>
         <div className='flex justify-center items-center'>
             <svg className="animate-spin h-8 w-8 mr-3" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>  
