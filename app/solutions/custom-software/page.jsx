@@ -47,7 +47,7 @@ const CustomSoftware = () => {
             <div className='flex flex-col justify-center items-center bg-neutral-950 p-4 lg:w-1/5'>
                 <LuSprout size={40} className='animate-pulse' />
                 <h1 className='text-4xl my-4 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-500'>Scalability and Flexibility</h1>
-                <p>solutions are designed to grow and adapt as clients' businesses evolve.</p>                
+                <p>solutions are designed to grow and adapt as clients businesses evolve.</p>                
             </div>
             <div className='flex flex-col justify-center items-center bg-neutral-950 p-4 lg:w-1/5'>
                 <AiFillThunderbolt size={40} className='animate-pulse' />

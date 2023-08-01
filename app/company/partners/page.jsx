@@ -29,7 +29,7 @@ const Partners = () => {
                                 </div>
                                 <div className='bg-neutral-950 p-4'>
                                     <h1 className='text-4xl my-4 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-500'>Colaborate</h1>
-                                    <p>If your business have overlaping services, let's team up instead of competing.</p>
+                                    <p>If your business have overlaping services, let&apos;s team up instead of competing.</p>
                                 </div>
                                 <div className='bg-neutral-950 p-4'>
                                     <h1 className='text-4xl my-4 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-500'>Learning Programs</h1>
