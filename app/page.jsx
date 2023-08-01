@@ -3,6 +3,7 @@ import Hero from '@/components/Hero/Hero'
 import PriceCards from '@/components/PriceCards/PriceCards'
 
 export default function Home() {  
+
   return (
     <main className='flex flex-col md:justify-center'>
       <Header />      
