@@ -77,20 +77,25 @@ code {
 
 /* Glassmorphism Effect */
 .glass {
-  background: linear-gradient(
-    180deg,
-    rgba(var(--background-start-rgb), 0.9) 0%,
-    rgba(var(--background-end-rgb), 0.9) 100%
-  );
-  backdrop-filter: blur(28px);
-  border: 1px solid rgba(var(--foreground-rgb), 0.125);
-  box-shadow: 0 8px 32px 0 rgba(var(--foreground-rgb), 0.125);
-  z-index: 999;
+	background: linear-gradient(
+		180deg,
+		rgba(var(--background-start-rgb), 0.9) 0%,
+		rgba(var(--background-end-rgb), 0.9) 100%
+	  );
+	  backdrop-filter: blur(28px);
+	  border: 1px solid rgba(var(--foreground-rgb), 0.125);
+	  box-shadow: 0 8px 32px 0 rgba(var(--foreground-rgb), 0.125);
+	  z-index: 999;
+}
+.glassLight {
+	  backdrop-filter: blur(28px);
+	  border: 1px solid rgba(var(--foreground-rgb), 0.125);
+	  box-shadow: 0 8px 32px 0 rgba(var(--foreground-rgb), 0.125);
 }
 
 /* Button */
 .neonButton{
-	color: #2daa52;
+	color: white;
 	display: inline-block;
   width: 100%;
   margin: 2px 0;
@@ -111,7 +116,11 @@ code {
 }
 
 .neonButton.active{
-	box-shadow: 0 0 2px #2daa52, 0 0 2px #2daa52, 0 0 2px #2daa52, 0 0 2px #2daa52;
+	border-left: 3px solid #3fff8c;
+	color: #3fff8c;
+}
+.neonButton:hover{
+	color: #3fff8c;
 }
 
 .neonButton span{
