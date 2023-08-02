@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 import { FaFacebook, FaTwitter, FaWhatsapp, FaLinkedin } from 'react-icons/fa'
 import ParticleSystem from '@/components/ParticleSystem/ParticleSystem'
+import Footer from '@/components/Footer/Footer'
 
 export default function page() {
   return (
@@ -34,6 +35,7 @@ export default function page() {
             </div>
         </div>   
         <ParticleSystem />
+        <Footer />
     </div>
   )
 }
