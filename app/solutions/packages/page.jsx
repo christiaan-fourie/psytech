@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
 import PriceCards from '@/components/PriceCards/PriceCards'
 import React from 'react'
@@ -8,7 +9,8 @@ const Packages = () => {
         <Header />
         <div className='pt-24'>
             <PriceCards />
-        </div>        
+        </div> 
+        <Footer />       
     </div>    
   )
 }
