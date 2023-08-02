@@ -127,7 +127,7 @@ function Header() {
                     </Link>
                 </div>
                 <div className='flex items-center'>
-                    <div className={`${showMenu ? 'absolute h-[100vh] glass bg-opacity-90 w-1/3 left-0 top-0 z-40' : 'hidden'} md:flex`}>
+                    <div className={`${showMenu ? 'absolute bg-neutral-950 bg-opacity-90 w-full left-0 top-20 mt-1 z-40' : 'hidden'} md:flex`}>
                         <ul className={`${showMenu ? 'flex-col' : 'flex-row'} flex justify-end `}>
                             <li className="px-4 py-2 transition-all duration-300">
                                 <button onClick={(e) => toggleCompanyDropdownState()} className='neonButton'>
