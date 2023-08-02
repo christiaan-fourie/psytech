@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
 import Hero from '@/components/Hero/Hero'
 import PriceCards from '@/components/PriceCards/PriceCards'
@@ -35,7 +36,8 @@ export default function Home() {
           <input className='border border-[#2daa52] text-[#2daa52] my-4 py-2 px-4 w-[40vw]' placeholder='Email Address' />
           <button className='border border-[#2daa52] text-[#2daa52] my-4 py-2 px-4'>Subscribe</button>
         </div>
-      </div>      
+      </div>
+      <Footer />      
     </main>
   )
 }
