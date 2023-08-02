@@ -201,11 +201,11 @@ function Header() {
                     }
                 </div>
         </div>
-        <div className='hidden lg:block absolute mr-6 mt-2 rounded-full bg-neutral-950 right-0 px-12'>
+        {/* <div className='hidden lg:block absolute mr-6 mt-2 rounded-full bg-neutral-950 right-0 px-12'>
             <div className='flex flex-row items-center gap-2'>
                 {activePage}
             </div>            
-        </div>
+        </div> */}
         
     </div>
     
