@@ -1,5 +1,6 @@
 'use client'
 
+import Footer from "@/components/Footer/Footer"
 import Header from "@/components/Header/Header"
 import Image from "next/image"
 
@@ -100,12 +101,11 @@ const About = () => {
                       <Image alt='Psytech Software Devices' className="animate-pulse"  width={techStachSize} height={techStachSize} src="/postman.png"></Image>
                     </div>
                   </div>
-
-                </div>     
+                </div>                     
               </div>
             )
-
-          }          
+          }  
+        <Footer /> 
     </div>
   )
 }
