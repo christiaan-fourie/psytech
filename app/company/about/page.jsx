@@ -1,7 +1,5 @@
 'use client'
 
-import Footer from "@/components/Footer/Footer"
-import Header from "@/components/Header/Header"
 import Image from "next/image"
 
 import { useState, useEffect } from "react"
@@ -42,7 +40,6 @@ const About = () => {
 
   return (
     <div>
-        <Header />
           <div className='flex flex-col lg:flex-row justify-between items-center pt-24 px-12'>
             <div>
               <h1 className='text-4xl text-left font-bold my-6 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-500'>{ headerText }</h1>
@@ -105,7 +102,6 @@ const About = () => {
               </div>
             )
           }  
-        <Footer /> 
     </div>
   )
 }
