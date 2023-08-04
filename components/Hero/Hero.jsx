@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -11,7 +12,7 @@ export default function Hero() {
               <p className='font-sans font-light text-lg'>
                 At Psytech, We understand the importance of trust and transparency in the digital world. <br /> Therefore, we strive to create software solutions that are genuine, reliable, and true to our values. <br /> Resulting in a commitment to authenticity is reflected in everything we do.
               </p>
-              <button className='border border-[#2daa52] text-[#2daa52] my-4 py-2 px-4'>Explore</button>
+              <Link href='/company/about' className='border border-[#2daa52] text-[#2daa52] my-12 py-2 px-4'>Explore</Link>
             </div>
           </div>
         </div>
