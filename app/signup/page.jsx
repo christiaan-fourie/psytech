@@ -5,10 +5,8 @@ import Link from 'next/link'
 // import usestate
 import { useState, useEffect } from 'react';
 
-// import components
-import Header from '../../components/Header/Header'
-import Loader from '../../components/Loader/'
-
+// Import Loader
+import Loader from '@/components/Loader'
 
 const SignUp = () => {
 
@@ -74,7 +72,6 @@ const SignUp = () => {
     return (
         <div className='bg-neutral-900 h-screen '>
           {loading && <Loader />}
-          <Header />
           
             {/* A mini Form that adds users */}
             <div className='mx-24 h-full p-12 rounded-xl'>
