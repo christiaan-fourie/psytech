@@ -95,6 +95,10 @@ code {
 	  border: 1px solid rgba(var(--foreground-rgb), 0.125);
 	  box-shadow: 0 8px 32px 0 rgba(var(--foreground-rgb), 0.125);
 }
+.glassLightNoBd {
+	backdrop-filter: blur(28px);
+	box-shadow: 0 8px 32px 0 rgba(var(--foreground-rgb), 0.125);
+}
 
 /* Button */
 .neonButton{
