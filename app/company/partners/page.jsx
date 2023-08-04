@@ -1,11 +1,8 @@
-import Footer from '@/components/Footer/Footer'
-import Header from '@/components/Header/Header'
 import React from 'react'
 
 const Partners = () => {
   return (
     <div>
-      <Header />
         <div className='pt-24'> 
             <div className=''>
                 <div className='flex justify-center pt-24'>
@@ -42,7 +39,6 @@ const Partners = () => {
                 </div>
             </div>
         </div>
-        <Footer />
     </div>
   )
 }
