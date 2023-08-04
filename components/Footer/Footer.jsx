@@ -1,14 +1,10 @@
 'use client'
 
-import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaFacebook, FaGithub, FaWhatsapp } from 'react-icons/fa'
-
-// Import Loader
-import Loader from '@/components/Loader'
 
 const Footer = () => {
     // Once something is clicked, start loading the page
@@ -16,8 +12,7 @@ const Footer = () => {
 
   return (
     <div className='border-t flex flex-col items-center border-neutral-800 font-sans font-light capitalize'>
-        { isLoading && <Loader /> }
-        <div className='flex items-center border-b-2 py-12 border-green-500'>
+        <div className='flex items-center border-b py-12 border-neutral-800'>
                         <Image
                             src="/logo.png"
                             alt="Psytech Logo"
@@ -37,8 +32,8 @@ const Footer = () => {
                             </div>
                         </div>
         </div>
-        <div className='z-40 p-12 flex flex-col md:flex-row justify-between w-2/3'>            
-            <div className=''>
+        <div className='mt-6 px-12 flex flex-col md:flex-row gap-8 w-full md:w-2/3'>
+            <div className='w-full md:w-1/3 overflow-hidden'>
                 <ul>
                     <li className='mb-4 text-lg border-b text-green-500 border-green-500'>Company</li>
                     <Link href='/'>
@@ -59,7 +54,7 @@ const Footer = () => {
 
                 </ul>
             </div>
-            <div>
+            <div className='w-full md:w-1/3 overflow-hidden'>
                 <ul>
                     <li className='mb-4 text-lg border-b text-green-500 border-green-500'>Solutions</li>
                     <Link href='/solutions/packages'>
@@ -73,7 +68,7 @@ const Footer = () => {
                     </Link>                    
                 </ul>
             </div>
-            <div>
+            <div className='w-full md:w-1/3 overflow-hidden'>
                 <ul>
                     <li className='mb-4 text-lg border-b text-green-500 border-green-500'>Legal</li>
                     <Link href='/terms-and-conditions'>
