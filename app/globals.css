@@ -32,6 +32,9 @@
   margin: 0;
   cursor: none;
 }
+*:hover {
+  cursor: none;
+}
 
 html {
   color-scheme: dark;
