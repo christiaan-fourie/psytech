@@ -1,11 +1,8 @@
-import Footer from '@/components/Footer/Footer';
-import Header from '@/components/Header/Header';
 import React from 'react';
 
 const termsAndConditions = () => {
   return (
     <div>
-      <Header />
       <div className='py-24 text w-1/2 mx-auto'>
         <h1 className='text-4xl text-center font-bold my-6 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-500'>
           Terms and Conditions for Psytech Studio
@@ -93,7 +90,6 @@ const termsAndConditions = () => {
           Thank you for reading and agreeing to our terms and conditions. Your continued use of Psytech Studio&apos;s services and website signifies your acceptance of these terms.
         </p>
       </div>
-      <Footer />
     </div>
   );
 };
