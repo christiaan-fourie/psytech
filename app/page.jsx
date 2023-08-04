@@ -1,38 +1,47 @@
 import Hero from '@/components/Hero/Hero'
-import PriceCards from '@/components/PriceCards/PriceCards'
+
+import { FaKey, FaHome } from 'react-icons/fa'
+
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Home() {  
 
   return (
     <main className='flex flex-col md:justify-center'>
-      <Hero />
-      {/* Three Cards that display the pricing structure */}
-      <div className='text-center glassLightNoBd pb-12'>
-        <h1 className='text-4xl my-6 bg-clip-text font-bold text-transparent bg-gradient-to-r from-green-700 to-blue-500'>We Value</h1>
-        <div className='flex flex-col sm:flex-row justify-center items-center gap-12'>
-          <div className='w-4/5 md:w-1/5 bg-neutral-900 rounded-lg shadow-lg p-4'>
-            <h2 className='text-2xl font-bold py-2'>Security</h2>
-            <p className='font-sans font-light text-lg bg-opacity-50'>Protecting against unauthorized access and damage through measures like encryption, firewalls, and access controls.</p>
-          </div>
-          <div className='w-4/5 md:w-1/5 bg-neutral-900 rounded-lg shadow-lg p-4'>
-            <h2 className='text-2xl font-bold py-2'>Privacy</h2>
-            <p className='font-sans font-light text-lg bg-opacity-50'>Ensuring personal information remains confidential and away from public view, safeguarding your privacy.</p>
-          </div>
-          <div className='w-4/5 md:w-1/5 bg-neutral-900 rounded-lg shadow-lg p-4'>
-            <h2 className='text-2xl font-bold py-2'>Reliability</h2>
-            <p className='font-sans font-light text-lg bg-opacity-50'>Guaranteeing we and our systems will perform consistently without failure over time, ensuring an uptime of 99%.</p>
-          </div>
-        </div>
-      </div>
+      {/* Hero Section */}
+      <Hero />      
 
-      <PriceCards />
+      {/* Section for Hiring */}
+      <div className="flex-col justify-center items-center my-12 py-12 glassLightNoBd">
+                    <h1 className='text-4xl text-center font-bold my-6 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-500'>We are Hiring !</h1>
+                    <p className='font-sans font-light text-lg text-center'>
+                      We are putting together a group of talented and enthusiastic individuals. <br />
+                      <Link href='/company/careers' className='rounded-full mx-auto bg-[#2daa52] hover:bg-[#2daa5200] text-neutral-950 hover:text-[#2daa52] border glassLight border-[#2daa52] px-4 py-4 my-6 w-1/2 lg:w-1/5 flex items-center justify-center gap-2 hover:gap-4 transition-all'><FaKey />Apply Now</Link>
+                    </p>
+      </div>    
+
+      {/* Section for Investment Oppertunities */}
+      <div className='flex flex-col lg:gap-4 h-screen lg:flex-row justify-start items-center px-12'>
+            <Image alt='Psytech Software Devices' className="animate-pulse"  width={500} height={300} src='/invest.png'></Image>
+            <div>
+              <h1 className='text-4xl text-left font-bold my-6 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-500'>Get in by purchasing your equity.</h1>
+              <div className="flex gap-2 h-12">
+                    <Link href='/' className='rounded-l-full hover:bg-[#2daa5200] text-neutral-100 hover:text-[#2daa52] border glassLight border-[#2daa52] px-6 flex justify-end items-center gap-2 hover:gap-4 transition-all'>Learn More<FaHome /></Link>
+                    <Link href='/solutions/packages' className='rounded-r-full bg-[#2daa52] hover:bg-[#2daa5200] text-neutral-950 hover:text-[#2daa52] border glassLight border-[#2daa52] px-6 flex items-center gap-2 hover:gap-4 transition-all'><FaKey />See Oppertunities</Link>
+              </div>  
+            </div>            
+      </div>   
+
+      {/* Subscribe Section */}
       <div className='flex flex-col md:flex-row py-24 items-center justify-center gap-6'>
         <div className='text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#517dbf] to-[#2daa52]'>Subscribe</div>
         <div className='flex flex-col md:flex-row items-center gap-4'>
           <input className='border border-[#2daa52] text-[#2daa52] my-4 py-2 px-4 w-[40vw]' placeholder='Email Address' />
           <button className='border border-[#2daa52] text-[#2daa52] my-4 py-2 px-4'>Subscribe</button>
         </div>
-      </div>    
+      </div>  
+
     </main>
   )
 }
