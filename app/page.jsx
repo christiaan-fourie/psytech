@@ -7,7 +7,7 @@ export default function Home() {
     <main className='flex flex-col md:justify-center'>
       <Hero />
       {/* Three Cards that display the pricing structure */}
-      <div className='text-center bg-neutral-800 pb-12'>
+      <div className='text-center glassLightNoBd pb-12'>
         <h1 className='text-4xl my-6 bg-clip-text font-bold text-transparent bg-gradient-to-r from-green-700 to-blue-500'>We Value</h1>
         <div className='flex flex-col sm:flex-row justify-center items-center gap-12'>
           <div className='w-4/5 md:w-1/5 bg-neutral-900 rounded-lg shadow-lg p-4'>
