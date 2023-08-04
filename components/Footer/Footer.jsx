@@ -17,18 +17,18 @@ const Footer = () => {
                             src="/logo.png"
                             alt="Psytech Logo"
                             className='rotate-90 hover:rotate-180 transition-all duration-700'
-                            width={50}
-                            height={50}
+                            width={25}
+                            height={25}
                             priority
                         />
-                        <Link href='/' className="pl-4 tracking-tighter text-3xl font-extrabold hover:cursor-pointer bg-clip-text text-transparent bg-gradient-to-r from-[#517dbf] to-[#2daa52]">
+                        <Link href='/' className="pl-4 tracking-tighter text-2xl md:3xl font-extrabold hover:cursor-pointer bg-clip-text text-transparent bg-gradient-to-r from-[#517dbf] to-[#2daa52]">
                             Psytech<span className='font-extralight'>Studio</span>
                         </Link>
                         <div className=' pl-12 text-center'>
-                            <div className='flex justify-center items-center space-x-4'>
-                                <Link className='hover:bg-[#2daa52] rounded-full p-1 transition-all duration-500' href="https://www.facebook.com/psytechstudio" target='_blank'> <FaFacebook size={30} /> </Link>
-                                <Link className='hover:bg-[#2daa52] rounded-full p-1 transition-all duration-500' href="https://wa.me/0718737005" target='_blank'> <FaWhatsapp size={30} /> </Link>
-                                <Link className='hover:bg-[#2daa52] rounded-full p-1 transition-all duration-500' href="https://github.com/PsytechStudio" target='_blank'> <FaGithub size={30} /> </Link>
+                            <div className='flex justify-center items-center mspace-x-4'>
+                                <Link className='hover:bg-[#2daa52] rounded-full p-1 transition-all duration-500' href="https://www.facebook.com/psytechstudio" target='_blank'> <FaFacebook size={20} /> </Link>
+                                <Link className='hover:bg-[#2daa52] rounded-full p-1 transition-all duration-500' href="https://wa.me/0718737005" target='_blank'> <FaWhatsapp size={20} /> </Link>
+                                <Link className='hover:bg-[#2daa52] rounded-full p-1 transition-all duration-500' href="https://github.com/PsytechStudio" target='_blank'> <FaGithub size={20} /> </Link>
                             </div>
                         </div>
         </div>
@@ -83,7 +83,7 @@ const Footer = () => {
         {/* Copywright */}
         <div className='flex flex-col w-full md:flex-row glassLight capitalize items-center justify-between py-6 pl-12 pr-20 border-t border-neutral-800 mt-12 bg-opacity-50'>
             <p className='text-sm text-center font-light'>© 2021 Psytech Studio. All Rights Reserved. | Designed in Cape Town</p>
-            <p>Crafted By Psytech Studio </p>
+            <p className='text-sm text-center font-light hidden md:block'>Crafted By Psytech Studio </p>
         </div>
     </div>    
   )
