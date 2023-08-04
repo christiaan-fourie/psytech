@@ -53,10 +53,8 @@ const About = () => {
               }
             </div>
             <Image alt='Psytech Software Devices' className="animate-pulse"  width={600} height={400} src={image}></Image>
-          </div>
-          {
-            !isTyping && (
-              <div className="flex-col justify-center items-center my-12 py-12 bg-neutral-950">
+          </div>   
+          <div className="flex-col justify-center items-center my-12 py-12 glassLightNoBd">
                 <h1 className='text-4xl text-center font-bold my-6 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-500'>Our Mission</h1>
                 <p className='font-sans font-light text-lg text-center'>
                 We connect people to your business, this ensures that you are able to make informed decisions and provide the best service to your customers. <br />
@@ -99,9 +97,7 @@ const About = () => {
                     </div>
                   </div>
                 </div>                     
-              </div>
-            )
-          }  
+              </div>       
     </div>
   )
 }
