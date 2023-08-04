@@ -4,7 +4,7 @@ const PriceCards = () => {
   return (
     <div className='font-sans font-light text-lg'>              
       <h1 className='text-4xl text-center font-bold my-6 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-500'>Solutions</h1>
-      <div className='flex flex-col gap-4 lg:flex-row justify-around md:p-8 md:mx-10'>
+      <div className='flex flex-col gap-4 lg:flex-row justify-around md:p-24 md:mx-10'>
         <div className='flex flex-col lg:w-1/3 items-center p-8 md:rounded-3xl hover:shadow-[0_0_16px_5px_#2daa5255] backdrop-blur-sm bg-neutral-800 hover:bg-opacity-50'>
           <h1 className='text-4xl text-center'>Presence</h1>
           <h1 className='text-6xl my-6 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-500'>R 4 500</h1>
