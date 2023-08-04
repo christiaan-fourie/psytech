@@ -1,15 +1,12 @@
-import Header from '@/components/Header/Header'
 import React from 'react'
 
 import { LuSprout } from "react-icons/lu";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { FaPuzzlePiece } from "react-icons/fa";
-import Footer from '@/components/Footer/Footer';
 
 const CustomSoftware = () => {
   return (
     <div>
-        <Header />
         <div className='flex flex-col justify-center pt-24'>        
         {/* This page has options for custom software solutions? */}
             <h1 className='text-6xl mx-24 my-6 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-500'>Custom Solutions</h1>
@@ -63,7 +60,6 @@ const CustomSoftware = () => {
                 </div>
             </div>
         </div>
-        <Footer />
     </div>    
   )
 }
