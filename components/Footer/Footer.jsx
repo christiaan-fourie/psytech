@@ -8,14 +8,11 @@ import Link from 'next/link'
 import { FaFacebook, FaGithub, FaWhatsapp } from 'react-icons/fa'
 
 // Import Loader
-import Loader from '@/components//Loader'
+import Loader from '@/components/Loader'
 
 const Footer = () => {
     // Once something is clicked, start loading the page
     const [isLoading, setIsLoading] = useState(false)
-
-    
-
 
   return (
     <div className='border-t flex flex-col items-center border-neutral-800 font-sans font-light capitalize'>
@@ -33,12 +30,11 @@ const Footer = () => {
                             Psytech<span className='font-extralight'>Studio</span>
                         </Link>
                         <div className=' pl-12 text-center'>
-                                <ul className='flex gap-2 justify-center'>
-                                    {/* Social */}                    
-                                    <FaGithub size={25} />
-                                    <FaFacebook size={25} />
-                                    <FaWhatsapp size={25} />
-                                </ul>
+                            <div className='flex justify-center items-center space-x-4'>
+                                <Link className='hover:bg-[#2daa52] rounded-full p-1 transition-all duration-500' href="https://www.facebook.com/psytechstudio" target='_blank'> <FaFacebook size={30} /> </Link>
+                                <Link className='hover:bg-[#2daa52] rounded-full p-1 transition-all duration-500' href="https://wa.me/0718737005" target='_blank'> <FaWhatsapp size={30} /> </Link>
+                                <Link className='hover:bg-[#2daa52] rounded-full p-1 transition-all duration-500' href="https://github.com/PsytechStudio" target='_blank'> <FaGithub size={30} /> </Link>
+                            </div>
                         </div>
         </div>
         <div className='z-40 p-12 flex flex-col md:flex-row justify-between w-2/3'>            
@@ -46,19 +42,19 @@ const Footer = () => {
                 <ul>
                     <li className='mb-4 text-lg border-b text-green-500 border-green-500'>Company</li>
                     <Link href='/'>
-                        <li className=' text-sm my-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Home</li>
+                        <li className=' text-sm py-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Home</li>
                     </Link>
                     <Link href='/company/about'>
-                        <li className='text-sm my-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>About Us</li>
+                        <li className='text-sm py-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>About Us</li>
                     </Link>
                     <Link href='/company/careers'>
-                        <li className='text-sm my-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Careers</li>
+                        <li className='text-sm py-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Careers</li>
                     </Link>
                     <Link href='/company/investor-oppertunities'>
-                        <li className='relative text-sm my-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Investment Oppertunities</li>
+                        <li className='relative text-sm py-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Investment Oppertunities</li>
                     </Link>
                     <Link href='/company/partners'>
-                        <li className='text-sm my-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Partners</li>
+                        <li className='text-sm py-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Partners</li>
                     </Link>
 
                 </ul>
@@ -67,13 +63,13 @@ const Footer = () => {
                 <ul>
                     <li className='mb-4 text-lg border-b text-green-500 border-green-500'>Solutions</li>
                     <Link href='/solutions/packages'>
-                        <li className='text-sm my-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Packages</li>
+                        <li className='text-sm py-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Packages</li>
                     </Link>
                     <Link href='/solutions/custom-software'>
-                        <li className='text-sm my-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Custom Software</li>
+                        <li className='text-sm py-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Custom Software</li>
                     </Link>
                     <Link href='/solutions/security'>
-                        <li className='text-sm my-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Security Services</li>
+                        <li className='text-sm py-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Security Services</li>
                     </Link>                    
                 </ul>
             </div>
@@ -81,10 +77,10 @@ const Footer = () => {
                 <ul>
                     <li className='mb-4 text-lg border-b text-green-500 border-green-500'>Legal</li>
                     <Link href='/terms-and-conditions'>
-                        <li className='text-sm my-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Terms & Conditions </li>
+                        <li className='text-sm py-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Terms & Conditions </li>
                     </Link>
                     <Link href='/privacy-policy'>
-                        <li className='text-sm my-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Privacy Policy</li>
+                        <li className='text-sm py-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Privacy Policy</li>
                     </Link>                    
                 </ul>
             </div>            
