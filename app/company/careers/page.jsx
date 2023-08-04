@@ -1,11 +1,8 @@
-import Footer from '@/components/Footer/Footer'
-import Header from '@/components/Header/Header'
 import React from 'react'
 
 const Careers = () => {
   return (
     <div>
-      <Header />
         <div className='pt-24'> 
             <div className=''>
                 <div className='flex h-screen justify-center'>
@@ -59,7 +56,6 @@ const Careers = () => {
                 </div> */}
             </div>
         </div>
-        <Footer />
     </div>
   )
 }
