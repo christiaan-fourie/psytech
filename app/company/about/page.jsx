@@ -58,7 +58,7 @@ const About = () => {
   return (
     <section>
           {/* Section for About Us */}
-          <div className='flex flex-col lg:flex-row justify-between items-center pt-24 px-12 h-screen'>
+          <div className='flex flex-col lg:flex-row sm:justify-between items-center pt-24 px-12 h-screen'>
             <div>
               <h1 className='text-4xl text-left font-bold my-6 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-500'>{ headerText }</h1>
               {
