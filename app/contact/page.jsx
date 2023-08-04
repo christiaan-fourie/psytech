@@ -1,17 +1,12 @@
-import Header from '@/components/Header/Header'
 import React from 'react'
 import Link from 'next/link'
 
-import { FaFacebook, FaTwitter, FaWhatsapp, FaLinkedin } from 'react-icons/fa'
+import { FaFacebook, FaTwitter, FaWhatsapp, FaLinkedin, FaGithub } from 'react-icons/fa'
 import ParticleSystem from '@/components/ParticleSystem/ParticleSystem'
-import Footer from '@/components/Footer/Footer'
 
 export default function page() {
   return (
     <div>
-        <Header />
-        
-
         <div className='flex flex-col md:flex-row justify-center items-center min-h-screen'>
             <div className='flex flex-col justify-center items-center'>
                 <div className=' text-center z-0'>
@@ -23,6 +18,7 @@ export default function page() {
                         <Link className='hover:bg-[#2daa52] rounded-full p-1 transition-all duration-500' href="https://www.linkedin.com/" target='_blank'> <FaLinkedin size={30} /> </Link>
                         {/* Whatsapp */}
                         <Link className='hover:bg-[#2daa52] rounded-full p-1 transition-all duration-500' href="https://wa.me/0718737005" target='_blank'> <FaWhatsapp size={30} /> </Link>
+                        <Link className='hover:bg-[#2daa52] rounded-full p-1 transition-all duration-500' href="https://github.com/PsytechStudio" target='_blank'> <FaGithub size={30} /> </Link>
                     </div>
                 </div>
             </div>            
@@ -35,7 +31,6 @@ export default function page() {
             </div>
         </div>   
         <ParticleSystem />
-        <Footer />
     </div>
   )
 }
