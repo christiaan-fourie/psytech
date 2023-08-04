@@ -19,13 +19,11 @@ function Header() {
     const [isLoggedin, setIsLoggedin] = useState(false);
     // Active Page
     const [activePage, setActivePage] = useState('')
-    const [loading, setLoading] = useState(true)
 
     // useEffect When the page gets loaded, check the URL and set the active page & If you click outside the menu, close it
     useEffect(() => {
         setActivePage(window.location.pathname)
-        setLoading(false)
-    }, [])
+    }, [activePage])
 
     // When any of the menu items are clicked set loading to true
     const menuClicked = (clickedPage) => {        
@@ -33,12 +31,8 @@ function Header() {
         // Close the dropdown menus
         setCompanyDropdownState(false)
         setSolutionsDropdownState(false)
-        setLoading(true)
-        // Wait 1 seconds and set loading to false
-        setTimeout(() => {
-            setLoading(false)
-        }
-        , 1000)
+        // Redirect to the clicked page
+        window.location.href = clickedPage
     }
 
     // The Company Dropdown Menu
@@ -108,7 +102,7 @@ function Header() {
   return (
     <div className='fixed top-0 w-full backdrop-blur-sm shadow-2xl z-50'>
         {/* Loader */}
-        {loading ? <Loader /> : null}
+        {/* {loading ? <Loader /> : null} */}
         <div className='flex justify-between md:px-14 lg:px-24 items-center w-full py-4 border-b border-white border-opacity-50 overflow-hidden'>
                 {/* Dim the page */}
                 <div className='flex items-center'>
