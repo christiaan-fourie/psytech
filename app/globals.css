@@ -144,6 +144,33 @@ code {
 	width: 100%;
 }
 
+/* Modern HTML Table */
+table {
+  	border-collapse: collapse;
+  	border-spacing: 0;
+  	border: 0px solid #ddd;
+}
+th, td {
+  	text-align: left;
+  	padding: 16px;
+  	border: 0px solid #ddd;
+}
+tr {
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+.jobListing:hover {
+	background-color: #00000079;
+	color: #03f463;
+}
+tr:nth-child(even) {
+  	background-color: #00000024;
+}
+tr:nth-child(even):hover {
+	background-color: #00000079;
+}
+
+
 @keyframes animate1{
 	0%{
 		left: -100%;
