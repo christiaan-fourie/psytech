@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 // Import Loader
 import Loader from '@/components/Loader'
 
-import { FaAngleDown, FaAngleUp, FaArrowCircleLeft, FaArrowAltCircleLeft } from 'react-icons/fa'
+import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
 
 function Header() {
     // The Submenu Style
@@ -29,17 +29,17 @@ function Header() {
 
     // When any of the menu items are clicked set loading to true
     const menuClicked = (clickedPage) => {        
-        // Check if it is the same page
-        if (clickedPage === activePage) {
-            // If it is the same page, set loading to false
+        setActivePage(clickedPage)
+        // Close the dropdown menus
+        setCompanyDropdownState(false)
+        setSolutionsDropdownState(false)
+        setLoading(true)
+        // Wait 1 seconds and set loading to false
+        setTimeout(() => {
             setLoading(false)
-        }else{
-            setLoading(true)
-            // Set the active page
-            setActivePage(clickedPage)            
         }
+        , 1000)
     }
-
 
     // The Company Dropdown Menu
     const [companyDropdownState, setCompanyDropdownState] = useState(false)
@@ -105,8 +105,6 @@ function Header() {
             </div>
         </div>
     )
-
-
   return (
     <div className='fixed top-0 w-full backdrop-blur-sm shadow-2xl z-50'>
         {/* Loader */}
@@ -157,7 +155,7 @@ function Header() {
                     <svg
                         onClick={() => setShowMenu(!showMenu)}
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-12 w-12 hover:glow hover:animate-pulse md:hidden cursor-pointer z-50"
+                        className="h-12 w-12 hover:glow hover:animate-pulse md:hidden z-50"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -174,7 +172,7 @@ function Header() {
                         <svg
                             onClick={() => setShowMenu(!showMenu)}
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-12 w-12 hover:glow hover:animate-pulse md:hidden cursor-pointer z-50"
+                            className="h-12 w-12 hover:glow hover:animate-pulse md:hidden z-50"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
