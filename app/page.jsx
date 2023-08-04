@@ -1,5 +1,3 @@
-import Footer from '@/components/Footer/Footer'
-import Header from '@/components/Header/Header'
 import Hero from '@/components/Hero/Hero'
 import PriceCards from '@/components/PriceCards/PriceCards'
 
@@ -7,9 +5,7 @@ export default function Home() {
 
   return (
     <main className='flex flex-col md:justify-center'>
-      <Header />      
       <Hero />
-
       {/* Three Cards that display the pricing structure */}
       <div className='text-center bg-neutral-800 pb-12'>
         <h1 className='text-4xl my-6 bg-clip-text font-bold text-transparent bg-gradient-to-r from-green-700 to-blue-500'>We Value</h1>
@@ -36,8 +32,7 @@ export default function Home() {
           <input className='border border-[#2daa52] text-[#2daa52] my-4 py-2 px-4 w-[40vw]' placeholder='Email Address' />
           <button className='border border-[#2daa52] text-[#2daa52] my-4 py-2 px-4'>Subscribe</button>
         </div>
-      </div>
-      <Footer />      
+      </div>    
     </main>
   )
 }
