@@ -19,7 +19,7 @@ export default function Home() {
                       We are putting together a group of talented and enthusiastic individuals. <br />
                       <Link href='/company/careers' className='rounded-full mx-auto bg-[#2daa52] hover:bg-[#2daa5200] text-neutral-950 hover:text-[#2daa52] border glassLight border-[#2daa52] px-4 py-4 my-6 w-1/2 lg:w-1/5 flex items-center justify-center gap-2 hover:gap-4 transition-all'><FaKey />Apply Now</Link>
                     </p>
-      </div>    
+      </div>
 
       {/* Section for Investment Oppertunities */}
       <div className='flex flex-col lg:gap-4 h-screen lg:flex-row justify-start items-center px-12'>
