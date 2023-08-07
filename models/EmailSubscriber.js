@@ -6,7 +6,7 @@ const emailSubscriberSchema = new Schema(
     ip: String,
   },
   {
-    timestamps: true,
+    timestamps: false,
   }
 );
 
