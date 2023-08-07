@@ -43,7 +43,7 @@ export default function AddEmailSubscriber() {
                 <h1 className="text-4xl text-center font-bold my-6 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-500">{ message }</h1>
             :   <div className="flex flex-col md:flex-row items-center justify-center gap-3 my-12">
                     <h1 className="text-4xl text-center font-bold my-6 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-500">Subscribe to our Newsletter</h1>
-                    <form onSubmit={handleSubmit} className="flex flex-row gap-3">
+                    <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3">
                         <input
                             onChange={(e) => setSubscriberEmail(e.target.value)}
                             value={subscriberEmail}
