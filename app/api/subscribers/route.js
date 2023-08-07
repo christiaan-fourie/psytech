@@ -11,7 +11,6 @@ export async function POST(request) {
     // Get the subscriberEmail and date
     const { subscriberEmail, date } = await request.json();
 
-
     await connectMongoDB();
     await EmailSubscriber.create({ subscriberEmail, date, ip });
     return NextResponse.json({ message: "Email Subscribed" }, { status: 201 });
