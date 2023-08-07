@@ -37,7 +37,7 @@ export default function AddEmailSubscriber() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-3 my-12">        
+    <div className="flex flex-col md:flex-row items-center justify-center gap-3 my-12 p-12 md:p-0">        
         {
             message ? 
                 <h1 className="text-4xl text-center font-bold my-6 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-500">{ message }</h1>
