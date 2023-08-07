@@ -1,12 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 
 export default function AddEmailSubscriber() {
   const [subscriberEmail, setSubscriberEmail] = useState("");
+  const [message, setMessage] = useState(null);
 
-  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,7 +25,7 @@ export default function AddEmailSubscriber() {
       });
 
       if (res.ok) {
-        router.push("/");
+        setMessage("Email Added");
       } else {
         throw new Error("Failed to create a Subscriber");
       }
@@ -51,7 +50,7 @@ export default function AddEmailSubscriber() {
         > 
             Subscribe
         </button>
-        {subscriberEmail}
+        {message && <p>{message}</p>}
 
     </form>
   );
