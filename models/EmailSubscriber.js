@@ -3,6 +3,7 @@ import mongoose, { Schema } from "mongoose";
 const emailSubscriberSchema = new Schema(
   {
     subscriberEmail: String,
+    date: Date,
     ip: String,
   },
   {
