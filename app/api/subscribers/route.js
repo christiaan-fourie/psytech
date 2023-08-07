@@ -3,6 +3,9 @@ import EmailSubscriber from "@/models/EmailSubscriber";
 import { NextResponse } from "next/server";
 
 export async function POST(request) {
+    const { subscriberIp } = request.headers.get("x-real-ip");
+    console.log(subscriberIp);
+
     const { subscriberEmail } = await request.json();
     await connectMongoDB();
     await EmailSubscriber.create({ subscriberEmail });
