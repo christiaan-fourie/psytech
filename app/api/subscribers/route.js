@@ -8,7 +8,7 @@ export async function POST(request) {
     const { subscriberEmail } = await request.json();
     await connectMongoDB();
     await EmailSubscriber.create({ subscriberEmail });
-    return NextResponse.json({ message: "Email Added" }, { status: 201 });
+    return NextResponse.json({ message: "Email Subscribed" }, { status: 201 });
 }
 
 export async function GET() {
