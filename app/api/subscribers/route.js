@@ -3,7 +3,6 @@ import EmailSubscriber from "@/models/EmailSubscriber";
 import { NextResponse } from "next/server";
 
 export async function POST(request) {
-    console.log(request);
 
     // Get the IP Address
     const ip = request.headers.get("x-real-ip") || request.headers.get("x-forwarded-for") || request.headers.get("cf-connecting-ip") || request.headers.get("fastly-client-ip") || request.headers.get("x-cluster-client-ip") || request.headers.get("x-forwarded") || request.headers.get("forwarded-for") || request.headers.get("forwarded") || request.connection.remoteAddress;
