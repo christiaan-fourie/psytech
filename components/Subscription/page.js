@@ -6,11 +6,11 @@ export default function AddEmailSubscriber() {
   const [subscriberEmail, setSubscriberEmail] = useState("");
   const [message, setMessage] = useState(null);
 
-  const date = new Date();
-
+  const date = new Date();  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
 
     if (!subscriberEmail) {
       alert("Email Required.");
