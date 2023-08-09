@@ -37,7 +37,7 @@ const Careers = () => {
         <div className='flex flex-col md:flex-row items-center justify-center h-screen md:mx-12'>
             {/* An Career Image */}
             <div>
-                <Image src='/careers.jpg' className='rounded-full mx-auto w-1/2 pt-6 md:w-full' width={400} height={400} />
+                <Image alt='Careers' src='/careers.jpg' className='rounded-full mx-auto w-1/2 pt-6 md:w-full' width={400} height={400} />
             </div>
             <div className='px-12'>
                 <h1 className='text-6xl my-6 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-blue-500'>Careers</h1>
