@@ -29,12 +29,12 @@ const ParticleSystem = () => {
 
     // create an array of particles that is round and small
     var particles = [];
-    for (var i = 0; i < 150; i++) {
+    for (var i = 0; i < 50; i++) {
         particles.push({
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
             vx: Math.random() * 6 - 3,
-            color: '#517dbf',
+            color: '#2daa52',
             vy: Math.random() * 6 - 3,
             // Make the particles bigger when closer to the center and smaller when further away
             size: Math.random() * 0.5 + 1,
@@ -73,7 +73,7 @@ const ParticleSystem = () => {
     animate();
   }, []);
 
-  return <canvas ref={canvasRef} width={3660} height={2400} className='fixed top-0 left-0 -z-20 overflow-hidden' />;
+  return <canvas ref={canvasRef} width={1200} height={1200} className='fixed w-screen h-screen top-0 left-0 -z-20 overflow-hidden' />;
 };
 
 export default ParticleSystem;
