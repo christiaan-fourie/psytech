@@ -22,15 +22,29 @@ const Cursor = () => {
 
   return (
     <>
+      {/* The Dot */}
       <div
         id="cursor"
         ref={cursor1}
-        className="bg-[#2daa52] h-1 w-1 fixed rounded-full z-50"
+        className="
+        bg-[#2daa52] h-1 w-1 
+        fixed rounded-full 
+        -translate-x-[8px] -translate-y-[6px] z-50
+        "
       ></div>
+      {/* The Circle */}
       <div
         id="cursor2"
         ref={cursor2}
-        className="border-2 rounded-full shadow-[0_0_15px_2px_#2daa52] border-[#2daa52] h-9 w-9 fixed transition-all duration-700 ease-out hover:bg-opacity-10 -translate-x-1/4 -translate-y-1/4 -z-50"
+        className="
+          border-2 
+          rounded-full shadow-[0_0_15px_2px_#2daa52] 
+          border-[#2daa52] h-9 w-9 
+          fixed transition-all 
+          duration-700 ease-out 
+          hover:bg-opacity-10
+          -translate-x-4 -translate-y-[14px] -z-50
+          "
       ></div>
     </>
   );
