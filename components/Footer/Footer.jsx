@@ -11,7 +11,7 @@ const Footer = () => {
     const [isLoading, setIsLoading] = useState(false)
 
   return (
-    <div className='border-t flex flex-col items-center border-neutral-800 font-sans font-light capitalize'>
+    <div className='border-t flex flex-col items-center border-neutral-800 font-sans font-light capitalize backdrop-blur-sm'>
         <div className='flex items-center border-b py-12 border-neutral-800'>
                         <Image
                             src="/logo.png"
@@ -65,7 +65,7 @@ const Footer = () => {
                     </Link>
                     <Link href='/solutions/security'>
                         <li className='text-sm py-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Security Services</li>
-                    </Link>                    
+                    </Link>
                 </ul>
             </div>
             <div className='w-full md:w-1/3 overflow-hidden'>
@@ -76,7 +76,7 @@ const Footer = () => {
                     </Link>
                     <Link href='/privacy-policy'>
                         <li className='text-sm py-1 hover:text-green-500 hover:border-l  hover:pl-2 border-green-500 transition-all'>Privacy Policy</li>
-                    </Link>                    
+                    </Link>
                 </ul>
             </div>            
         </div>
