@@ -6,8 +6,6 @@ export default function AddEmailSubscriber() {
   const [subscriberEmail, setSubscriberEmail] = useState("");
   const [message, setMessage] = useState(null);
 
-  const date = new Date();  
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -23,7 +21,7 @@ export default function AddEmailSubscriber() {
         headers: {
           "Content-type": "application/json",
         },
-        body: JSON.stringify({ subscriberEmail, date }),
+        body: JSON.stringify({ subscriberEmail }),
       });
 
       if (res.ok) {
@@ -60,7 +58,7 @@ export default function AddEmailSubscriber() {
                         </button>
                         
                     </form>
-                </div>        
+                </div>
         }        
     </div>
   );
