@@ -5,21 +5,21 @@ import { NextResponse } from "next/server";
 export async function POST(request) {
 
     // Get the IP Address
-    const ip = request.headers.get("x-real-ip") || request.headers.get("x-forwarded-for") || request.headers.get("cf-connecting-ip") || request.headers.get("fastly-client-ip") || request.headers.get("x-cluster-client-ip") || request.headers.get("x-forwarded") || request.headers.get("forwarded-for") || request.headers.get("forwarded") || request.connection.remoteAddress;
+    const ip = request.headers.get("x-real-ip") || request.headers.get("x-forwarded-for") || request.headers.get("cf-connecting-ip") || request.headers.get("fastly-client-ip") || request.headers.get("x-cluster-client-ip") || request.headers.get("x-forwarded") || request.headers.get("forwarded-for") || request.headers.get("forwarded");
 
     // Get the subscriberEmail and date
-    const { subscriberEmail, date } = await request.json();
+    const { subscriberEmail } = await request.json();
 
     await connectMongoDB();
-    await EmailSubscriber.create({ subscriberEmail, date, ip });
+    await EmailSubscriber.create({ subscriberEmail, ip });
     return NextResponse.json({ message: "Email Subscribed" }, { status: 201 });
 }
 
-export async function GET() {
-    await connectMongoDB();
-    const emailSubscribers = await EmailSubscriber.find();
-    return NextResponse.json({ emailSubscribers });
-}
+// export async function GET() {
+//     await connectMongoDB();
+//     const emailSubscribers = await EmailSubscriber.find();
+//     return NextResponse.json({ emailSubscribers });
+// }
 
 // export async function DELETE(request) {
 //   const id = request.nextUrl.searchParams.get("id");
